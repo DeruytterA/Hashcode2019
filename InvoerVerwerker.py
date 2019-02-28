@@ -10,6 +10,7 @@ def leesLijn(H, V, bestand):
                 H.append([lijnlijst[0]] + lijnlijst[2:])
             else:
                 V.append([lijnlijst[0]] + lijnlijst[2:])
+    f.close()
 
 
 
