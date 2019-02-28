@@ -13,5 +13,4 @@ def Max(H: list, V, slide):
     for i in range(len(V)):
         for j in range(i + 1, len(V)):
             dezeSlide = [i, j]
-            alleCombinaties.append()
-
+            alleCombinaties.append(dezeSlide)
