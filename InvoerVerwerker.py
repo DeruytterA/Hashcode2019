@@ -1,5 +1,3 @@
-H = []
-V = []
 def leesLijn(H, V, bestand):
     with open(bestand) as f:
         aantalFotos = int(f.readline())
@@ -12,9 +10,7 @@ def leesLijn(H, V, bestand):
                 H.append([lijnlijst[0]] + lijnlijst[2:])
             else:
                 V.append([lijnlijst[0]] + lijnlijst[2:])
-
-
-leesLijn(H, V, "a_example.txt")
+    f.close()
 
 
 
