@@ -42,6 +42,7 @@ def Max(H: list, V: list, slide):
             maximum = waarde
             gevondenMaximum = teZoeken
 
+
             #zorg er voor dat al gebruikte fotos niet opnieuw gebruikt kunnen worden
 
     if len(gevondenMaximum) == 1:
