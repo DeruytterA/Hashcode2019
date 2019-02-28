@@ -9,6 +9,14 @@ def getTags(slide):
     return slide[0][2:]
 
 
+def Verticale(V: list):
+    lijst = []
+    for foto in V:
+        for foto2 in V:
+            if foto[0] != foto2[0] and len(Union(foto[2:], foto[2:])) > (len(foto[2:]) + len(foto2[2:])) * 1.5:
+                lijst.append[foto, foto2]
+    return lijst
+
 def BerekenWaarde(slide1, slide2):
     tags1 = getTags(slide1)
     tags2 = getTags(slide2)
@@ -17,10 +25,9 @@ def BerekenWaarde(slide1, slide2):
     enkel2 = list(set(tags2) - set(tags1))
     return min(len(midden), len(enkel1), len(enkel2))
 
-
-def Max(H: list, V: list, slide):
+def Max(H: list, lijstVerticale: list, slide):
     maximum = -1
-    alleCombinaties = []
+    alleCombinaties = lijstVerticale
     gevondenMaximum = []
 
     #Maak lijst met alle mogelijke slides combinaties
@@ -28,12 +35,6 @@ def Max(H: list, V: list, slide):
     for i in range(len(H)):
         if not H[i][1]:
             alleCombinaties.append([H[i]])
-    for i in range(len(V)):
-        for j in range(i + 1, len(V)):
-            if not V[i][1] and not V[j][1]:
-                dezeSlide = [V[i], V[j]]
-                alleCombinaties.append(dezeSlide)
-
                 #zoek hoogste score in alle combinaties van slides
 
     for teZoeken in alleCombinaties:
@@ -60,10 +61,10 @@ def Max(H: list, V: list, slide):
             found = False
             i = 0
             while not found:
-                if V[i][0] == id:
-                    V[i][1] = True
+                if lijstVerticale[i][0] == id:
+                    lijstVerticale[i][1] = True
                     found = True
                 i += 1
-    return [H, V, gevondenMaximum]
+    return [H, lijstVerticale, gevondenMaximum]
 
 

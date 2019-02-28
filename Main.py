@@ -1,7 +1,7 @@
 H = []  # Horizontale foto's
 V = []  # Verticale foto's
 #bestand = input("Whatever het bestand is dat we willen checken: ")
-bestand = "b_lovely_landscapes.txt"
+bestand = "c_memorable_moments.txt"
 from InvoerVerwerker import leesLijn
 from UitvoerVerwerker import output
 #from Photos import max
