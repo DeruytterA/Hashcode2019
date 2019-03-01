@@ -11,9 +11,3 @@ def leesLijn(H, V, bestand):
             else:
                 V.append([lijnlijst[0]] + lijnlijst[2:])
     f.close()
-
-
-
-
-
-
